@@ -1,0 +1,316 @@
+/* settings */
+:root{
+    --bg: #101010;
+    --primary: rgb(255, 255, 255);
+    --default: #dfdfdf;
+}
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+
+
+/* My Style */
+body{
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+/* Navigation Bar */
+.navbar{
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 5%;
+    background-color: rgba(16, 16, 16, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 0.1rem solid var(--default);
+    position: fixed;
+    z-index: 9999;
+}
+
+/* Logo */
+.navbar .nav-logo img{
+    display: inline-block;
+    width: 100px;
+    height: 69px;
+    margin-top: 0.5rem;
+}
+
+
+
+/* Main Navbar */
+.navbar .nav ul li {
+    display: inline-block;
+    margin: 2rem 1rem 0 1rem ;
+    font-size: 1.5rem;
+}
+
+.navbar .nav ul li a{
+   color: white;
+}
+.navbar .nav ul li a:hover{
+    color: var(--default);
+}
+.navbar .nav ul li a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2rem solid var(--default);
+    transform: scaleX(0);
+}
+
+.navbar .nav ul li a:hover::after{
+    transform: scaleX(0.5);
+    transition: 0.2s linear;
+}
+
+/* Responsive Menu */
+.nav {
+    display: flex;
+}
+
+.nav .nav-extra a{
+    display: inline-block;
+    margin: 1.5rem 0.5rem 0 0.5rem ;
+    color: white;
+}
+#hamburger{
+    display: none;
+}
+
+
+/* Hero Section */
+ .content{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../Assets/bg-machine.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.content .hero-txt{
+    margin-top: 10rem;
+    padding: 1.4rem 5%;
+    max-width: 55rem;
+}
+.content .hero-txt h1{
+    font-size: 3.5em;
+    color: #fff;
+}
+.content .hero-txt p{
+    font-size: 1.9rem;
+    padding-top: 2rem;
+    color: #fff;
+}
+
+.content .hero-txt a{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: black;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+}
+
+.content .hero-txt a:hover{
+    color: white;
+    background-color: #101010;
+}
+
+/* Style For Intro */
+.intro{
+    padding: 10rem 5%;
+    color: black;
+    max-width: 100rem;
+}
+
+.intro h1{
+    font-size: 2.5rem;
+}
+
+.intro h2{
+    padding-top: 2.5rem;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.intro .para-1, .para-2 p{
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-top: 5rem;
+    font-weight: 500;
+}
+
+
+/* Style for Desc */
+
+.desc{
+    padding: 15rem 5%;
+    color: #fafafa;
+    background-color: #101010;
+}
+
+.desc h1{
+    font-size: 2.5rem;
+    max-width: 80rem;
+
+}
+
+.desc h2{
+    padding-top: 2.5rem;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2rem;
+    max-width: 80rem;
+
+}
+.desc .para-1, .para-2 p{
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-top: 5rem;
+    font-weight: 500;
+    max-width: 80rem;
+}
+
+
+/* COPYRIGHTS */
+.footer{
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+   color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html{
+        font-size: 75%;
+    }
+}
+/* Tablet */
+@media (max-width: 768px) {
+    html{
+        font-size: 62.5%;
+    }
+
+    /* Menu resizing */
+    #hamburger{
+        display: inline-block;
+    }
+    .nav .nav-extra a{
+        display: inline-block;
+        margin: 1.3rem 0.5rem 0 0.5rem ;
+        color: white;
+    }
+
+    /* Side Bar */
+    .navbar .nav ul {
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        background-color: var(--primary);
+        width: 20rem;
+        height: 100vh;
+    }
+
+    .navbar .nav ul.active {
+        right: 0;
+    }
+
+    .navbar .nav ul li a{
+        display: block;
+        color: black;
+        margin: 1rem;
+        padding-left: 1.2rem;
+        font-size: 2rem;
+    }
+    .navbar .nav ul li a:hover{
+        color: rgb(0, 0, 0);
+    }
+
+    .navbar .nav ul li a::after{
+        border-bottom: 0.5rem solid var(--default);
+        transform-origin: 0 0;
+    }
+
+    .navbar .nav ul li a:hover::after{
+        
+        transform: scaleX(1);
+    }
+
+    /* Logo Sizing */
+    .navbar .nav-logo img{
+        display: inline-block;
+        width: 75px;
+        height: 49px;
+        margin-top: 0.4rem;
+    }
+
+
+}
+
+
+
+/* Mobile */
+@media (max-width: 450px) {
+    html{
+        font-size: 55%;
+    }
+
+ 
+
+    /* Logo Sizing */
+    .navbar .nav-logo img{
+        display: inline-block;
+        width: 56px;
+        height: 39px;
+        margin-top: 0.4rem;
+    }
+    
+}

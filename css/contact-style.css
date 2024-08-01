@@ -1,0 +1,410 @@
+/* settings */
+:root{
+    --bg: #101010;
+    --primary: rgb(255, 255, 255);
+    --default: #dfdfdf;
+}
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+
+
+/* My Style */
+body{
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+.navbar{
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 5%;
+    background-color: rgba(16, 16, 16);
+    border-bottom: 0.1rem solid var(--default);
+    position: fixed;
+    z-index: 9999;
+}
+
+/* Logo */
+.navbar .nav-logo img{
+    display: inline-block;
+    width: 100px;
+    height: 69px;
+    margin-top: 0.5rem;
+}
+
+
+
+/* Main Navbar */
+.navbar .nav ul li {
+    display: inline-block;
+    margin: 2rem 1rem 0 1rem ;
+    font-size: 1.5rem;
+}
+
+.navbar .nav ul li a{
+   color: white;
+}
+.navbar .nav ul li a:hover{
+    color: var(--default);
+}
+.navbar .nav ul li a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2rem solid var(--default);
+    transform: scaleX(0);
+}
+
+.navbar .nav ul li a:hover::after{
+    transform: scaleX(0.5);
+    transition: 0.2s linear;
+}
+
+/* Responsive Menu */
+.nav {
+    display: flex;
+}
+
+.nav .nav-extra a{
+    display: inline-block;
+    margin: 1.5rem 0.5rem 0 0.5rem ;
+    color: white;
+}
+#hamburger{
+    display: none;
+}
+
+/* Hero Text */
+
+.text-1{
+    text-align: center;
+    align-items: center;
+    margin: 0 15%;
+    margin-top: 13rem;
+    
+}
+
+.text-1 h1{
+    font-size: 3em;
+    color: #101010;
+}
+.text-1 p{
+    font-size: 1.3rem;
+    padding-top: 2rem;
+    color: #101010;
+}
+
+.text-1 a{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--bg);
+    border-radius: 0.5rem;
+}
+
+.text-1 a:hover{
+    color: black;
+    background-color: grey;
+}
+
+/* MAP */
+.map{
+
+    text-align: center;
+    align-items: center;
+    margin: 0 10%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.map h1{
+    color: #101010;
+
+}
+
+.map iframe{
+    width: 100%;
+    margin-top: 5rem;
+}
+
+
+
+/* CONTACT FORM */
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    background-color: #101010;
+}
+
+.col-1{
+    margin-bottom: 5rem;
+}
+
+.desc img{
+    width: 100px;
+    height: 69px;
+    margin: 2rem 10%;
+    margin-top: 4rem;
+}
+
+.desc p{
+    margin: 0 10%;
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+.desc h3{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0 10%;
+    padding-top: 3rem;
+}
+
+.flex-item {
+    display: inline-block;
+    margin: 1rem 10%;
+    padding-top: 1rem;
+}
+
+.flex-item .yt{
+    display: flex;
+}
+
+.flex-item .yt h4{
+    padding-left: 1rem;
+    margin-top: 3px;
+}
+
+.flex-item .ig{
+    display: flex;
+    margin-top: 10px;
+}
+
+.flex-item .ig h4{
+    padding-left: 1rem;
+    margin-top: 3px;
+}
+
+.col-right{
+    margin-bottom: 5rem;
+}
+
+.col-right h2{
+    margin: 0 10%;
+    margin-top: 4rem;
+    
+}
+
+.contact-flex {
+    display: inline-block;
+    margin: 0 10%;
+    margin-top: 2rem;
+}
+
+.contact-flex .phone{
+    display: flex;
+}
+
+.contact-flex .phone h4{
+    padding-left: 1rem;
+    margin-top: 3px;
+}
+
+.contact-flex .email{
+    display: flex;
+    margin-top: 10px;
+}
+
+.contact-flex .email h4{
+    padding-left: 1rem;
+    margin-top: 3px;
+}
+
+.col-right p{
+    margin: 0 10%;
+    margin-top: 1rem;
+}
+
+
+/* COPYRIGHTS */
+.footer{
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+   color: gray;
+}
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html{
+        font-size: 75%;
+    }
+
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html{
+        font-size: 75%;
+    }
+
+    /* Menu resizing */
+    #hamburger{
+        display: inline-block;
+    }
+    .nav .nav-extra a{
+        display: inline-block;
+        margin: 1.3rem 0.5rem 0 0.5rem ;
+        color: white;
+    }
+
+    /* Side Bar */
+    .navbar .nav ul {
+        position: absolute;
+        top: 100%;
+        right: 100%;
+        background-color: var(--primary);
+        width: 20rem;
+        height: 100vh;
+    }
+
+    .navbar .nav ul.active {
+        right: 0;
+    }
+
+    .navbar .nav ul li a{
+        display: block;
+        color: black;
+        margin: 1rem;
+        padding-left: 1.2rem;
+        font-size: 2rem;
+    }
+    .navbar .nav ul li a:hover{
+        color: rgb(0, 0, 0);
+    }
+
+    .navbar .nav ul li a::after{
+        border-bottom: 0.5rem solid var(--default);
+        transform-origin: 0 0;
+    }
+
+    .navbar .nav ul li a:hover::after{
+        
+        transform: scaleX(1);
+    }
+
+    /* Logo Sizing */
+    .navbar .nav-logo img{
+        display: inline-block;
+        width: 75px;
+        height: 49px;
+        margin-top: 0.4rem;
+    }
+
+    .form{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+        background-color: #101010;
+    }
+
+    .desc img{
+        width: 60px;
+        height: 40px;
+        margin: 2rem 10%;
+        margin-top: 4rem;
+    }
+
+    .flex-item .yt h4{
+        padding-left: 1rem;
+        margin-top: 4px;
+    }
+    
+    .flex-item .ig h4{
+        padding-left: 1rem;
+        margin-top: 4px;
+    }
+    
+    .contact-flex .phone h4{
+        padding-left: 1rem;
+        margin-top: 4px;
+    }
+    
+    .contact-flex .email h4{
+        padding-left: 1rem;
+        margin-top: 4px;
+    }
+    
+}
+
+
+
+/* Mobile */
+
+@media (max-width: 450px) {
+    html{
+        font-size: 55%;
+    }
+
+ 
+
+    /* Logo Sizing */
+    .navbar .nav-logo img{
+        display: inline-block;
+        width: 56px;
+        height: 39px;
+        margin-top: 0.4rem;
+    }
+
+    .flex-item .yt h4{
+        padding-left: 1rem;
+        margin-top: 4px;
+    }
+    
+    .flex-item .ig h4{
+        padding-left: 1rem;
+        margin-top: 4px;
+    }
+    
+    .contact-flex .phone h4{
+        padding-left: 1rem;
+        margin-top: 4px;
+    }
+    
+    .contact-flex .email h4{
+        padding-left: 1rem;
+        margin-top: 4px;
+    }
+}
