@@ -24,6 +24,9 @@ Teknologi :
 - CSS
 - JavaScript
 
+Link Akses Wesite Via Github Page : https://vyoss.github.io/scu.github.io/
+
+
 ## Hubungi Kami
 
 Jika Anda memiliki pertanyaan atau saran yang membangun perkembangan website kami, jangan ragu untuk menghubungi kami di [timdeveloper.scu@gmail.com](timdeveloper.scu@gmail.com).
